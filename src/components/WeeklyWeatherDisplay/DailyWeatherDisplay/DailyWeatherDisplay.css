@@ -1,0 +1,28 @@
+.daily-weather-container{
+    cursor: pointer;
+    width: 85%;
+    padding: 0 5%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day{
+    width: 130px;
+}
+
+.daily-weather-text{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.day, .max-temp {
+    color: rgb(248, 248, 248);
+}
+
+.min-temp{
+    color: rgba(248, 248, 248, 0.719);
+}

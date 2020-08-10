@@ -1,0 +1,23 @@
+.daily-details-container{
+    margin: -15px auto;
+    padding: 0 10px;
+    width: 85%;
+    height: 70px;
+    background-color: rgba(201, 201, 201, 0.219);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details-content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-text{
+    margin: 0;
+}

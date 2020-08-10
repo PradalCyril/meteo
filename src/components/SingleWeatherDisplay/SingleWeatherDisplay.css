@@ -1,0 +1,27 @@
+.single-weather-container{
+    color: rgb(248, 248, 248);
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-name{
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+}
+
+.actual-weather{
+    margin-top: 0px;
+    margin-bottom: 20px
+}
+
+.actual-temp{
+    margin: 0 0 50px 0;
+    padding-left: 25px;
+    font-size: 7em;
+    font-weight: 100;
+}

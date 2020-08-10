@@ -1,0 +1,15 @@
+.weekly-weather-container{
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgba(92, 92, 92, 0.363);
+    overflow-y: auto;
+    max-height: 397.5px;
+}
+
+.daily-weather-button:hover{
+    cursor: pointer;
+}
+.weekly-weather-content{
+    display: flex;
+    flex-direction: column;
+}
