@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import './WeeklyWeatherDisplay.css';
+import React from 'react';
 import DailyWeatherDisplay from './DailyWeatherDisplay/DailyWeatherDisplay';
 import { days } from '../../utils/enum';
-import { IData } from '../../utils/interface';
-
-interface IWeeklyWeatherDisplay {
-    data: any;
-}
+import { IData, IWeeklyWeatherDisplay } from '../../utils/interface';
+import './WeeklyWeatherDisplay.css';
 
 const dayName = [
     days.SUNDAY,
@@ -19,10 +15,8 @@ const dayName = [
 ];
 
 const WeeklyWeatherDisplay = (props: IWeeklyWeatherDisplay) => {
-
-    const { data } = props;
-    if (!Object.keys(data).length) return <div></div>;
-    const { daily } = data;
+    const { daily } = props;
+    if (!daily.length) return <div></div>;
     daily.shift();
     const currentDate = new Date();
     const dailyList = daily.map((weatherDay: any, index: number) => {

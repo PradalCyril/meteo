@@ -1,11 +1,6 @@
 import React from 'react';
+import { IDailyWeatherDetails } from '../../../../utils/interface';
 import './DailyWeatherDetails.css';
-import { IDataDetails } from '../../../../utils/interface';
-
-
-interface IDailyWeatherDetails {
-    dayData: IDataDetails;
-}
 
 const DailyWeatherDetails = (props: IDailyWeatherDetails) => {
     const { dayData } = props;
@@ -41,7 +36,7 @@ const DailyWeatherDetails = (props: IDailyWeatherDetails) => {
     const windSpeed = (
         <div className='details-content'>
             <p className='details-text'>Wind speed:</p>
-            <p className='details-text'>{dayData.windSpeed}</p>
+            <p className='details-text'>{Math.ceil(dayData.windSpeed)}&nbsp;km/h</p>
         </div>
     );
     const windDeg = (

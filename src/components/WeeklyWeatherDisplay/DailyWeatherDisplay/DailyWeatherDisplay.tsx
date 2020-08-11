@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import DailyWeatherDetails from './DailyWeatherDetails/DailyWeatherDetails';
 import WeatherIcon from '../WeatherIcon/WeatherIcon';
-import { IData } from '../../../utils/interface';
+import { IDailyWeatherDisplay } from '../../../utils/interface';
 import './DailyWeatherDisplay.css';
-
-interface IDailyWeatherDisplay {
-    dayData: IData;
-    day: string;
-}
 
 const DailyWeatherDisplay = (props: IDailyWeatherDisplay) => {
     const [isClicked, setIsClicked] = useState(false);

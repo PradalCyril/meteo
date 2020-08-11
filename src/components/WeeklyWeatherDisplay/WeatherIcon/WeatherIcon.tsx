@@ -1,8 +1,5 @@
 import React from 'react';
-
-interface IWeatherIcon {
-    iconCode: string;
-}
+import { IWeatherIcon } from '../../../utils/interface/IWeatherIcon';
 
 const WeatherIcon = (props: IWeatherIcon) => {
     const { iconCode } = props;
