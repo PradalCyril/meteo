@@ -2,7 +2,7 @@ import React from 'react';
 import { ISingleWeatherDisplay } from '../../utils/interface';
 import './SingleWeatherDisplay.css';
 
-const SingleWeatherDisplay = (props: ISingleWeatherDisplay) => {
+const SingleWeatherDisplay = (props: ISingleWeatherDisplay): JSX.Element => {
     const { mainWeather, temperature, cityName } = props;
     if (!mainWeather || !temperature || !cityName) return <div></div>;
     return (

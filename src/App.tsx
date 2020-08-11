@@ -9,7 +9,7 @@ import './App.css';
 const currentWeatherRequest = `https://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&appid=${process.env.REACT_APP_METEO_TOKEN}`;
 const weeklyWeatherRequest = `https://api.openweathermap.org/data/2.5/onecall?lat=48.8588377&lon=2.27702&units=metric&exclude=current,hourly,minutely&appid=${process.env.REACT_APP_METEO_TOKEN}`;
 
-const App = () => {
+const App = (): JSX.Element => {
   const [currentWeatherData, setCurrentWeatherData] = useState<ISingleWeatherDisplay>({
     cityName: '',
     temperature: 0,
@@ -18,7 +18,7 @@ const App = () => {
   const [isCurrentWeatherInError, setIsCurrentWeatherInError] = useState<boolean>(false);
   const [daily, setDaily] = useState<any[]>([]);
   const [isDailyInError, setIsDailyInError] = useState<boolean>(false);
-  const getCurrentWeatherData: any = () => axios.get(currentWeatherRequest)
+  const getCurrentWeatherData: Function = (): any => axios.get(currentWeatherRequest)
     .then((res): void => {
       const data = res.data;
       const cityName = data.name;
@@ -31,7 +31,7 @@ const App = () => {
       });
     }).catch((err) => { setIsCurrentWeatherInError(true) });
 
-  const getDaily: any = () => axios.get(weeklyWeatherRequest)
+  const getDaily: Function = (): any => axios.get(weeklyWeatherRequest)
     .then((res): void => {
       const data = res.data;
       const daily = data.daily;

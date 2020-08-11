@@ -5,3 +5,4 @@ export * from './IDailyWeatherDisplay';
 export * from './IWeatherIcon';
 export * from './IDailyWeatherDetails';
 export * from './ISingleWeatherDisplay';
+export * from './IBackgroundDisplay';

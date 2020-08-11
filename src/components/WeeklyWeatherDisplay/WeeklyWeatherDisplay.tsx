@@ -14,7 +14,7 @@ const dayName = [
     days.SATURDAY
 ];
 
-const WeeklyWeatherDisplay = (props: IWeeklyWeatherDisplay) => {
+const WeeklyWeatherDisplay = (props: IWeeklyWeatherDisplay): JSX.Element => {
     const { daily } = props;
     if (!daily.length) return <div></div>;
     daily.shift();

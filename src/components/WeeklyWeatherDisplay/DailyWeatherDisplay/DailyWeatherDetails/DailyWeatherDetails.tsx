@@ -2,7 +2,7 @@ import React from 'react';
 import { IDailyWeatherDetails } from '../../../../utils/interface';
 import './DailyWeatherDetails.css';
 
-const DailyWeatherDetails = (props: IDailyWeatherDetails) => {
+const DailyWeatherDetails = (props: IDailyWeatherDetails): JSX.Element => {
     const { dayData } = props;
     if (!Object.keys(dayData).length) return <div />;
     const humidity = (

@@ -4,7 +4,7 @@ import WeatherIcon from '../WeatherIcon/WeatherIcon';
 import { IDailyWeatherDisplay } from '../../../utils/interface';
 import './DailyWeatherDisplay.css';
 
-const DailyWeatherDisplay = (props: IDailyWeatherDisplay) => {
+const DailyWeatherDisplay = (props: IDailyWeatherDisplay): JSX.Element => {
     const [isClicked, setIsClicked] = useState(false);
     const { dayData, day } = props;
     if (!Object.keys(dayData).length) return <div />;
